@@ -12,6 +12,6 @@ echo "$varnd place"; //PHP is looking for a variable and doesnt find it, it only
 
 echo "($var)nd place"; //will print out "2nd place"
 
-echo $var."nd place"; //Example of concantanation in PHP. PHP uses periods NOT plues signs for concantanation.
+echo $var."nd place"; //Example of concantanation in PHP. PHP uses periods NOT plues signs for concantanation. Will print out "2nd place"
 
 ?>
