@@ -8,8 +8,12 @@ function booksByAuthor($tempAuthorName, $tempYear = 1910) {
 	echo "\n";
 }
 
+function getAuthor() {
+	return "Charles Dickens";
+}
+
 $year = 1920;
-$authorName = "William Shakespeare";
+$authorName = getAuthor();
 
 booksByAuthor($authorName, $year);
 
