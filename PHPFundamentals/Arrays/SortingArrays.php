@@ -23,6 +23,9 @@
 
 	asort($authors);// will preserve keys. Makes it better for associative arrays and not so much for indexed arrays
 
+	print_r($authorsAssociative); // will print out all of the keys intact
+
+	ksort($authorsAssociative); // Will print out array sorted by its key value
 
 
 
