@@ -11,7 +11,7 @@
 		function __construct() {
 
 			echo "I'm in the constructor";
-			$this->firstName = "Samuel Langhorne"
+			$this->firstName = "Samuel Langhorne";
 		}
 
 		public function getFirstName() {
