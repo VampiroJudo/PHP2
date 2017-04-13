@@ -4,13 +4,13 @@
 
 		const 	AVG_LIFE_SPAN = 79;
 
-		public $firstName;
-		public $lastName;
-		public $yearBorn;
+		protected $firstName;
+		protected $lastName;
+		protected $yearBorn;
 
 		function __construct($tempFirst = "", $tempLast = "", $tempYear = "") {
 
-			echo "Person Constructor".PHP_EOL; //EOL stands for End Of Line
+			
 			$this->firstName = $tempFirst;
 			$this->lastName  = $tempLast;
 			$this->yearBorn  = $tempYear;
@@ -28,7 +28,7 @@
 
 		}
 
-		public function getFullName() {
+		protected function getFullName() {
 
 			echo "Person->getFullName()".PHP_EOL;
 			return $this->firstName." ".$this->lastName.PHP_EOL;
@@ -37,20 +37,22 @@
 
 	class Author extends Person {
 
-		public $penName = "Mark Twain";
+		protected $penName = "Mark Twain";
 
 		public function getPenName() {
 
 			return $this->penName.PHP_EOL;
 		}
 
-		public function getFullName() {
+		public function getCompleteName() {
 
-			echo "Author->getFullName()".PHP_EOL;
-			return $this->firstName." ".$this->lastName.PHP_EOL;
+			return $this->firstName." ".$this->lastName." a.k.a. ".$this->penName.PHP_EOL;
 		}
 	}
 
-	$newAuthor = new Author("Samuel Langhornre", "Clemens", 1899);
-	echo $newAuthor->getFullName();// will print out full name
+	$newAuthor = new Author("Samuel Langhorne", "Clemens", 1899);
+	echo $newAuthor->getFullName; //with throw a fatal error
+	echo $newAuthor->penName; // will also throw a fatal error
+
+	echo $newAuthor->getCompleteName(); //will call our protected property
 ?>
